@@ -20,7 +20,7 @@
         </activity>
 
         <activity
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                android:theme="@style/DetailsActivityTheme"
                 android:name="dev.dvdciri.sampleapp.postdetails.PostDetailsActivity"/>
     </application>
 
