@@ -42,6 +42,7 @@ dependencies {
     implementation MainApplicationDependencies.picasso
     implementation MainApplicationDependencies.design
     implementation MainApplicationDependencies.appCompat
+    implementation MainApplicationDependencies.coroutines
 
     // Test dependencies
     testImplementation UnitTestingDependencies.archComponentCoreTesting

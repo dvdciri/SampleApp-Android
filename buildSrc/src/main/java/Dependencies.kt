@@ -31,6 +31,9 @@ object Versions {
 
     // Android tools
     const val androidTools = "26.3.1"
+
+    // Coroutines
+    const val coroutinesVersion = "1.1.1"
 }
 
 object MainApplicationDependencies {
@@ -53,6 +56,7 @@ object MainApplicationDependencies {
     const val rxandroid                         = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
     const val archComponentLifeCycleExtensions  = "android.arch.lifecycle:extensions:${Versions.archComponents}"
     const val archComponentLifeCycleCompiler    = "android.arch.lifecycle:compiler:${Versions.archComponents}"
+    const val coroutines    = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
 }
 
 object UnitTestingDependencies {
