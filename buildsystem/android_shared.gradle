@@ -1,0 +1,16 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: "${rootDir}/buildsystem/project_shared.gradle"
+
+dependencies {
+
+    implementation MainApplicationDependencies.retrofit
+    implementation MainApplicationDependencies.retrofitGson
+    implementation MainApplicationDependencies.retrofitRxAdapter
+
+    // kapt dependencies
+    kapt MainApplicationDependencies.archComponentLifeCycleCompiler
+
+    kaptAndroidTest MainApplicationDependencies.daggerCompiler
+}

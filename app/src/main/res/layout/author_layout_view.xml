@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <View android:id="@+id/topSeparator"
+          android:background="@color/gray"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:padding="8dp"
+            android:id="@+id/infoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/avatarImageView"
+                tools:src="@tools:sample/avatars"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+        <TextView
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/avatarImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                tools:text="@tools:sample/lorem"/>
+
+        <TextView
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:id="@+id/email"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintLeft_toRightOf="@id/avatarImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                tools:text="@tools:sample/lorem"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <View android:background="@color/gray"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"/>
+
+</LinearLayout>

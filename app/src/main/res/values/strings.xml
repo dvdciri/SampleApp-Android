@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sample App</string>
+
+    <string name="post_list_generic_error">Error while loading the list of post</string>
+    <string name="post_details_generic_error">Error while loading post details</string>
+    <string name="comments_text">Comments %d</string>
+    <string name="author_title_text">%1$s (%2$s)</string>
+    <string name="author_email_text">Email: %s</string>
+</resources>
