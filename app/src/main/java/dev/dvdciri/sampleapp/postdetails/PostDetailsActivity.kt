@@ -8,22 +8,18 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.squareup.picasso.Picasso
 import dev.dvdciri.sampleapp.R
-import dev.dvdciri.sampleapp.di.ApplicationComponentHolder
 import dev.dvdciri.sampleapp.framework.extensions.observe
-import dev.dvdciri.sampleapp.framework.extensions.viewModel
 import dev.dvdciri.sampleapp.framework.viewmodel.viewstate.ErrorUiModel
 import dev.dvdciri.sampleapp.ui.ItemUiModel
 import dev.dvdciri.sampleapp.ui.RecyclerViewItemUiModelAdapter
 import kotlinx.android.synthetic.main.post_details_activity.*
-import javax.inject.Inject
+import org.koin.android.viewmodel.ext.android.viewModel
+
 
 class PostDetailsActivity : AppCompatActivity() {
 
-    private lateinit var postDetailsViewModel: PostDetailsViewModel
+    private val postDetailsViewModel: PostDetailsViewModel by viewModel()
     private lateinit var itemUiModelAdapter: RecyclerViewItemUiModelAdapter
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +27,12 @@ class PostDetailsActivity : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { onBackPressed() }
 
-        ApplicationComponentHolder.get(application).inject(this)
-
         itemUiModelAdapter = RecyclerViewItemUiModelAdapter()
         recyclerView.adapter = itemUiModelAdapter
 
         val detailsNavigationParams = intent.getSerializableExtra(PARAM_POST_ID) as DetailsNavigationParams
 
-        postDetailsViewModel = viewModel(viewModelFactory) {
+        with(postDetailsViewModel) {
             observe(postDetailsViewState, ::onPostDetailsViewStateChanged)
             loadPostDetails(detailsNavigationParams)
         }

@@ -13,10 +13,10 @@ import dev.dvdciri.sampleapp.framework.viewmodel.viewstate.ErrorUiModel
 import dev.dvdciri.sampleapp.postdetails.mapper.CommentListToItemUiModelMapper
 import dev.dvdciri.sampleapp.postdetails.mapper.PostDetailsToUiModelsMapper
 import dev.dvdciri.sampleapp.ui.ItemUiModel
-import javax.inject.Inject
+
 
 class PostDetailsViewModel
-@Inject constructor(
+constructor(
     private val scheduleProvider: ScheduleProvider,
     private val getPostDetailsByPostIdUseCase: GetPostDetailsByPostIdUseCase,
     private val getCommentsByPostIdUseCase: GetCommentsByPostIdUseCase,

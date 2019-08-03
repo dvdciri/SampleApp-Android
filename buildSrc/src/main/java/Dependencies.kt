@@ -9,7 +9,6 @@ object Versions {
     const val constraintLayout = "1.1.3"
 
     // Third party libraries
-    const val dagger = "2.21"
     const val retrofit = "2.5.0"
     const val okhttp = "3.12.1"
     const val rxjava = "2.2.7"
@@ -29,6 +28,8 @@ object Versions {
     // Arch components
     const val archComponents = "1.1.1"
 
+    const val koinVersion = "2.0.1"
+
     // Android tools
     const val androidTools = "26.3.1"
 }
@@ -41,8 +42,6 @@ object MainApplicationDependencies {
     const val design                            = "com.android.support:design:${Versions.appCompat}"
     const val androidAnnotations                = "com.android.support:support-annotations:${Versions.appCompat}"
     const val supportV4                         = "com.android.support:support-v4:${Versions.appCompat}"
-    const val daggerCompiler                    = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    const val dagger                            = "com.google.dagger:dagger:${Versions.dagger}"
     const val retrofit                          = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGson                      = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val retrofitRxAdapter                 = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
@@ -53,6 +52,9 @@ object MainApplicationDependencies {
     const val rxandroid                         = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
     const val archComponentLifeCycleExtensions  = "android.arch.lifecycle:extensions:${Versions.archComponents}"
     const val archComponentLifeCycleCompiler    = "android.arch.lifecycle:compiler:${Versions.archComponents}"
+    const val koinCore                          = "org.koin:koin-core:${Versions.koinVersion}"
+    const val koinAndroid                       = "org.koin:koin-android:${Versions.koinVersion}"
+    const val koinViewModel                     = "org.koin:koin-android-viewmodel:${Versions.koinVersion}"
 }
 
 object UnitTestingDependencies {

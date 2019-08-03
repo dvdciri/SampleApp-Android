@@ -1,38 +1,32 @@
 package dev.dvdciri.sampleapp.post
 
-import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import dev.dvdciri.sampleapp.R
-import dev.dvdciri.sampleapp.di.ApplicationComponentHolder
 import dev.dvdciri.sampleapp.framework.extensions.observe
-import dev.dvdciri.sampleapp.framework.extensions.viewModel
 import dev.dvdciri.sampleapp.framework.viewmodel.viewstate.ErrorUiModel
 import dev.dvdciri.sampleapp.postdetails.DetailsNavigationParams
 import dev.dvdciri.sampleapp.postdetails.PostDetailsActivity
 import dev.dvdciri.sampleapp.ui.ItemUiModel
 import dev.dvdciri.sampleapp.ui.RecyclerViewItemUiModelAdapter
 import kotlinx.android.synthetic.main.post_list_activity.*
-import javax.inject.Inject
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class PostListActivity : AppCompatActivity(), RecyclerViewItemUiModelAdapter.OnItemClickListener {
 
-    private lateinit var postListViewModel: PostListViewModel
-    private lateinit var itemUiModelAdapter: RecyclerViewItemUiModelAdapter
+    private val postListViewModel: PostListViewModel by viewModel()
 
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    private lateinit var itemUiModelAdapter: RecyclerViewItemUiModelAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.post_list_activity)
 
-        ApplicationComponentHolder.get(application).inject(this)
-
         itemUiModelAdapter = RecyclerViewItemUiModelAdapter(this)
         recyclerView.adapter = itemUiModelAdapter
 
-        postListViewModel = viewModel(viewModelFactory) {
+        with (postListViewModel) {
             observe(postListViewState, ::onPageListViewStateChanged)
             observe(navigateToDetails, ::onNavigateToDetailsEvent)
             loadPosts()

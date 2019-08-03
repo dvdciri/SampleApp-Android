@@ -9,10 +9,6 @@ dependencies {
     implementation MainApplicationDependencies.kotlin
     implementation MainApplicationDependencies.rxjava2
 
-    // Compile time dependencies
-    implementation MainApplicationDependencies.dagger
-    kapt MainApplicationDependencies.daggerCompiler
-
     // Unit test
     testImplementation UnitTestingDependencies.junit
     testImplementation UnitTestingDependencies.kotlinTest
@@ -21,4 +17,7 @@ dependencies {
         exclude group: 'org.jetbrains.kotlin'
         exclude group: 'org.mockito'
     }
+
+    // Koin core
+    implementation MainApplicationDependencies.koinCore
 }

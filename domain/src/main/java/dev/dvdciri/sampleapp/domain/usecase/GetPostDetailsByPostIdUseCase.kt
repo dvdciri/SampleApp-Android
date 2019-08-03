@@ -4,10 +4,10 @@ import dev.dvdciri.sampleapp.domain.model.PostDetails
 import dev.dvdciri.sampleapp.domain.repository.PostRepository
 import dev.dvdciri.sampleapp.domain.repository.UserRepository
 import io.reactivex.Single
-import javax.inject.Inject
+
 
 class GetPostDetailsByPostIdUseCase
-@Inject constructor(
+constructor(
     private val postRepository: PostRepository,
     private val userRepository: UserRepository
 ) {

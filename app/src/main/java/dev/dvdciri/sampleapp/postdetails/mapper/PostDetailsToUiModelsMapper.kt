@@ -3,10 +3,10 @@ package dev.dvdciri.sampleapp.postdetails.mapper
 import dev.dvdciri.sampleapp.domain.model.PostDetails
 import dev.dvdciri.sampleapp.post.mapper.PostToPostUiModelMapper
 import dev.dvdciri.sampleapp.ui.ItemUiModel
-import javax.inject.Inject
+
 
 class PostDetailsToUiModelsMapper
-@Inject constructor(
+constructor(
     private val userToAuthorUiModelMapper: UserToAuthorUiModelMapper,
     private val postToPostUiModelMapper: PostToPostUiModelMapper
 ) {

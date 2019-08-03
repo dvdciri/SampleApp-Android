@@ -2,11 +2,11 @@ package dev.dvdciri.sampleapp.postdetails.mapper
 
 import dev.dvdciri.sampleapp.domain.model.Comment
 import dev.dvdciri.sampleapp.postdetails.model.CommentUiModel
-import javax.inject.Inject
+
 
 private const val AVATAR_URL_TEMPLATE = "https://api.adorable.io/avatars/180/%d.png"
 
-class CommentToCommentUiModelMapper @Inject constructor() {
+class CommentToCommentUiModelMapper constructor() {
 
     fun mapToPresentation(comment: Comment): CommentUiModel {
         return with(comment) {

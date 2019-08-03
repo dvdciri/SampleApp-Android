@@ -14,12 +14,12 @@ import dev.dvdciri.sampleapp.post.mapper.PostToPostUiModelMapper
 import dev.dvdciri.sampleapp.postdetails.DetailsNavigationParams
 import dev.dvdciri.sampleapp.ui.ItemUiModel
 import dev.dvdciri.sampleapp.ui.skeleton.SkeletonUiModelCreator
-import javax.inject.Inject
+
 
 private const val SKELETON_ITEM_COUNT = 50
 
 class PostListViewModel
-@Inject constructor(
+constructor(
     private val scheduleProvider: ScheduleProvider,
     private val getPostsUseCase: GetPostsUseCase,
     private val postToPostUiModelMapper: PostToPostUiModelMapper,

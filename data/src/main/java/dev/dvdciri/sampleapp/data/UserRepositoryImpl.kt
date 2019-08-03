@@ -5,10 +5,10 @@ import dev.dvdciri.sampleapp.data.source.JsonPlaceholderNetworkDataSource
 import dev.dvdciri.sampleapp.domain.model.User
 import dev.dvdciri.sampleapp.domain.repository.UserRepository
 import io.reactivex.Single
-import javax.inject.Inject
+
 
 class UserRepositoryImpl
-@Inject constructor(
+constructor(
     private val jsonPlaceholderNetworkDataSource: JsonPlaceholderNetworkDataSource,
     private val userDtoToUserMapper: UserDtoToUserMapper
 ) : UserRepository {

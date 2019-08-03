@@ -2,9 +2,9 @@ package dev.dvdciri.sampleapp.data.mapper
 
 import dev.dvdciri.sampleapp.data.model.PostDto
 import dev.dvdciri.sampleapp.domain.model.Post
-import javax.inject.Inject
 
-class PostDtoToPostMapper @Inject constructor() {
+
+class PostDtoToPostMapper constructor() {
 
     fun mapToDomain(postDto: PostDto): Post {
         return with(postDto) {

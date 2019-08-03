@@ -7,10 +7,10 @@ import dev.dvdciri.sampleapp.domain.model.Comment
 import dev.dvdciri.sampleapp.domain.model.Post
 import dev.dvdciri.sampleapp.domain.repository.PostRepository
 import io.reactivex.Single
-import javax.inject.Inject
+
 
 class PostRepositoryImpl
-@Inject constructor(
+constructor(
     private val jsonPlaceholderNetworkDataSource: JsonPlaceholderNetworkDataSource,
     private val postDtoToPostMapper: PostDtoToPostMapper,
     private val commentDtoToCommentMapper: CommentDtoToCommentMapper

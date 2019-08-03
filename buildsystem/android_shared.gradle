@@ -12,5 +12,6 @@ dependencies {
     // kapt dependencies
     kapt MainApplicationDependencies.archComponentLifeCycleCompiler
 
-    kaptAndroidTest MainApplicationDependencies.daggerCompiler
+    implementation MainApplicationDependencies.koinAndroid
+    implementation MainApplicationDependencies.koinViewModel
 }

@@ -4,10 +4,10 @@ import dev.dvdciri.sampleapp.data.model.CommentDto
 import dev.dvdciri.sampleapp.data.model.PostDto
 import dev.dvdciri.sampleapp.data.model.UserDto
 import io.reactivex.Single
-import javax.inject.Inject
+
 
 class JsonPlaceholderNetworkDataSource
-@Inject constructor(
+constructor(
     private val jsonPlaceholderClient: JsonPlaceholderClient
 ){
 

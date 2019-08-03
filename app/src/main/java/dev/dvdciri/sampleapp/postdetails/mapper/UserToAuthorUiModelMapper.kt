@@ -4,12 +4,12 @@ import android.content.res.Resources
 import dev.dvdciri.sampleapp.R
 import dev.dvdciri.sampleapp.domain.model.User
 import dev.dvdciri.sampleapp.postdetails.model.AuthorUiModel
-import javax.inject.Inject
+
 
 private const val USER_AVATAR_TEMPLATE = "https://api.adorable.io/avatars/180/%d.png"
 
 class UserToAuthorUiModelMapper
-@Inject constructor(
+constructor(
     private val resources: Resources
 ) {
 
